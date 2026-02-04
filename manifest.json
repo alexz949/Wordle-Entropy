@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Wordle Entropy Meter",
+  "version": "0.1.0",
+  "description": "Shows entropy of your current 5-letter Wordle guess.",
+  "permissions": ["dom"],
+  "host_permissions": ["https://www.nytimes.com/games/wordle/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.nytimes.com/games/wordle/*"],
+      "js": ["content-div.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["answers.json", "guesses.json"],
+      "matches": ["https://www.nytimes.com/*"]
+    }
+  ]
+}

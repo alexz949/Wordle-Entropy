@@ -14,7 +14,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["answers.json", "guesses.json"],
+      "resources": ["words-list/answers.json", "words-list/guesses.json"],
       "matches": ["https://www.nytimes.com/*"]
     }
   ]
